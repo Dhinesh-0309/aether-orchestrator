@@ -1,0 +1,5 @@
+mode: edge          # or "cloud"
+prometheus_url: "http://localhost:9090"
+cpu_threshold: 70  # % usage before offloading to cloud
+git_repo: "https://github.com/yourname/aether-deployments.git"
+poll_interval: 60   # in seconds

@@ -13,7 +13,7 @@ spec:
         app: edge-app
     spec:
       containers:
-      - name: edge-app
-        image: tiangolo/uvicorn-gunicorn-fastapi:python3.9
+      - image: tiangolo/uvicorn-gunicorn-fastapi:python3.9
+        name: edge-app
         ports:
         - containerPort: 80

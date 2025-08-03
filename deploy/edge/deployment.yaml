@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-app
+  name: edge-app
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: edge-app
   template:
     metadata:
       labels:
-        app: demo
+        app: edge-app
     spec:
       containers:
-      - image: nginx
-        name: demo-container
+      - name: edge-app
+        image: tiangolo/uvicorn-gunicorn-fastapi:python3.9
         ports:
         - containerPort: 80
